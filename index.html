@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palawan Wild — Endemic Animals of Palawan</title>
+<meta name="description" content="A field guide to the endemic animals of Palawan, Philippines — conservation status, encounter safety, and where to find them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#f4efe1" stroke-width="1.5"><path d="M12 3c-1.8 0-3 1.4-3 3 0 .7.2 1.3.5 1.8C7.2 8.6 5 11 5 14c0 4 3.2 7 7 7s7-3 7-7c0-3-2.2-5.4-4.5-6.2.3-.5.5-1.1.5-1.8 0-1.6-1.2-3-3-3z"/></svg>
+      Palawan Wild
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="species.html">Species</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="rescue.html">Rescue &amp; Hotline</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO with photo slideshow background -->
+<section class="hero">
+  <div class="hero-slideshow" id="hero-slideshow" aria-hidden="true">
+    <img src="assets/hero/slide-01.jpg" alt="" class="is-active">
+    <img src="assets/hero/slide-02.jpg" alt="">
+    <img src="assets/hero/slide-03.jpg" alt="">
+    <img src="assets/hero/slide-04.jpg" alt="">
+    <img src="assets/hero/slide-05.jpg" alt="">
+    <img src="assets/hero/slide-06.jpg" alt="">
+    <img src="assets/hero/slide-07.jpg" alt="">
+    <img src="assets/hero/slide-08.jpg" alt="">
+    <div class="hero-slideshow-dots" id="hero-dots"></div>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow" style="color: var(--warm-amber);">A field guide to Palawan's wildlife</p>
+      <h1>Endemic life,<br>found nowhere else on Earth.</h1>
+      <p class="lede">
+        Palawan is home to animals that exist in no other forest, river, or reef on the planet —
+        many found nowhere outside this one island group. This guide covers who they are,
+        where to find them, and what to do if you meet one in the wild.
+      </p>
+      <div class="hero-actions">
+        <a href="species.html" class="btn btn-primary">Explore the species</a>
+        <a href="map.html" class="btn btn-outline">View the map</a>
+      </div>
+      <div class="hero-stat-strip">
+        <div class="hero-stat"><b>14</b><span>Species profiled</span></div>
+        <div class="hero-stat"><b>5</b><span>Critically endangered or worse</span></div>
+        <div class="hero-stat"><b>3</b><span>Animal classes covered</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section--tight">
+  <div class="wrap two-col">
+    <div>
+      <p class="eyebrow">Why Palawan</p>
+      <h2>An island that evolved on its own.</h2>
+      <p>
+        Separated from the rest of the Philippine archipelago for millions of years,
+        Palawan's wildlife shares more in common with Borneo than with Luzon or Mindanao.
+        That isolation produced a roster of animals — pangolins, peacock-pheasants,
+        bearcats, hornbills — that live only here.
+      </p>
+    </div>
+    <div>
+      <p class="eyebrow">Why this guide exists</p>
+      <h2>Identification, safety, and protection.</h2>
+      <p>
+        Every entry includes conservation status, what to do (and not do) if you encounter
+        the animal, first aid if a bite or injury is genuinely possible, and how to report
+        wildlife crime or call for a rescue. Knowing the facts protects both people and animals.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED SPECIES -->
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">A few to start with</p>
+    <h2 style="margin-bottom: 28px;">Featured endemic species</h2>
+    <div class="card-grid" id="featured-grid"></div>
+    <div style="text-align:center; margin-top: 36px;">
+      <a href="species.html" class="btn btn-teal">See all 14 species →</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESCUE CALLOUT -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="callout" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:20px;">
+      <div>
+        <h3 style="margin-bottom:4px;">See wildlife being harmed, sold, or trapped?</h3>
+        <p style="margin-bottom:0;">Report it immediately — every species on this list is protected under Philippine law.</p>
+      </div>
+      <a href="rescue.html" class="btn btn-primary">Hotline numbers →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Palawan Wild</h4>
+        <p style="font-size:0.88rem; max-width:320px;">An independent field guide to the endemic animals of Palawan, Philippines. Built to support identification, safety, and conservation awareness.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="species.html">All species</a></li>
+          <li><a href="map.html">Interactive map</a></li>
+          <li><a href="quiz.html">Take the quiz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Safety</h4>
+        <ul>
+          <li><a href="rescue.html">Wildlife rescue hotline</a></li>
+          <li><a href="rescue.html#cruelty">Report animal cruelty</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Conservation status data referenced from IUCN Red List assessments and the Philippine DENR National List of Threatened Fauna. Not an official PCSD or government resource.
+    </div>
+  </div>
+</footer>
+
+<!-- Species detail modal (shared structure, filled in by modal.js) -->
+<div class="modal-overlay" id="species-modal-overlay">
+  <div class="modal" id="species-modal" role="dialog" aria-modal="true"></div>
+</div>
+
+<script src="data/species.js"></script>
+<script src="js/species-render.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/nav.js"></script>
+<script>
+  // Featured subset on homepage: one strong example per category
+  document.addEventListener("DOMContentLoaded", () => {
+    const featuredIds = ["palawan-pangolin", "philippine-cockatoo", "philippine-crocodile", "palawan-peacock-pheasant"];
+    const featured = SPECIES.filter(s => featuredIds.includes(s.id));
+    renderSpeciesCards(featured, document.getElementById("featured-grid"));
+  });
+
+  // Hero slideshow: crossfade every 5s, with clickable dots.
+  // Only rotates through images that actually exist — missing slide-0X.jpg
+  // files are silently skipped rather than showing a broken image.
+  document.addEventListener("DOMContentLoaded", () => {
+    const slideshow = document.getElementById("hero-slideshow");
+    const allImgs = Array.from(slideshow.querySelectorAll("img"));
+    const dotsContainer = document.getElementById("hero-dots");
+
+    let slides = [];
+    let current = 0;
+    let timer;
+    let rotationBuilt = false;
+
+    function buildRotation() {
+      if (rotationBuilt) return; // guard against double-build
+      rotationBuilt = true;
+
+      slides = allImgs.filter(img => img.dataset.failed !== "true");
+
+      dotsContainer.innerHTML = "";
+      if (slides.length === 0) return; // no photos yet — hero just shows the dark base color
+
+      slides.forEach((img, i) => img.classList.toggle("is-active", i === 0));
+      current = 0;
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.setAttribute("aria-label", `Show slide ${i + 1}`);
+        if (i === 0) dot.setAttribute("aria-current", "true");
+        dot.addEventListener("click", () => {
+          clearInterval(timer);
+          goTo(i);
+          startTimer();
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      if (slides.length > 1) startTimer();
+    }
+
+    function goTo(index) {
+      slides[current].classList.remove("is-active");
+      dotsContainer.children[current].removeAttribute("aria-current");
+      current = index;
+      slides[current].classList.add("is-active");
+      dotsContainer.children[current].setAttribute("aria-current", "true");
+    }
+
+    function next() { goTo((current + 1) % slides.length); }
+
+    function startTimer() {
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReduced) return;
+      clearInterval(timer);
+      timer = setInterval(next, 5000);
+    }
+
+    // Track every image's load/error in one place, then build the rotation
+    // once all have settled (or after a safety timeout, in case one hangs).
+    let settled = 0;
+    function markSettled(img, failed) {
+      if (img.dataset.checked === "true") return; // avoid double-counting
+      img.dataset.checked = "true";
+      img.dataset.failed = failed ? "true" : "false";
+      if (failed) img.style.display = "none";
+      settled++;
+      if (settled === allImgs.length) buildRotation();
+    }
+
+    allImgs.forEach(img => {
+      if (img.complete) {
+        // naturalWidth === 0 on a "complete" image means it failed to load
+        markSettled(img, img.naturalWidth === 0);
+      } else {
+        img.addEventListener("load", () => markSettled(img, false), { once: true });
+        img.addEventListener("error", () => markSettled(img, true), { once: true });
+      }
+    });
+
+    // Safety net: if something hangs (slow network, etc.), build the
+    // rotation anyway after 4s using whatever has settled by then.
+    setTimeout(() => { if (!rotationBuilt) buildRotation(); }, 4000);
+  });
+</script>
+</body>
+</html>
