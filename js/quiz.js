@@ -1,9 +1,4 @@
-/* ==========================================================================
-   PALAWAN WILD — QUIZ (v2: photos + game-like presentation)
-   Generates multiple-choice questions from data/species.js. Every question
-   shows the animal's photo (falls back to a category icon if missing).
-   Includes an animated progress bar and a livelier results screen.
-   ========================================================================== */
+import { SPECIES, CATEGORY_LABELS } from "../data/species.js";
 
 const QUIZ_LENGTH = 8;
 
@@ -27,7 +22,6 @@ function pickWrongOptions(correctValue, allValues, count) {
   return shuffle(pool).slice(0, count);
 }
 
-/** Build one question object: { prompt, options, correctIndex, explanation, animal } */
 function buildQuestion(animal, type) {
   const allNames = SPECIES.map(s => s.name);
   const allSci = SPECIES.map(s => s.scientificName);
@@ -70,7 +64,6 @@ function buildQuestion(animal, type) {
     };
   }
 
-  // type === "name" — show photo + scientific name, ask for common name
   const wrong = pickWrongOptions(animal.name, allNames, 3);
   const options = shuffle([animal.name, ...wrong]);
   return {
@@ -87,8 +80,6 @@ function generateQuiz() {
   const chosenAnimals = shuffle(SPECIES).slice(0, QUIZ_LENGTH);
   return chosenAnimals.map(animal => buildQuestion(animal, types[Math.floor(Math.random() * types.length)]));
 }
-
-/* ---------------- Quiz runtime ---------------- */
 
 let quizQuestions = [];
 let currentQ = 0;
@@ -176,12 +167,10 @@ function selectAnswer(index, btnEl) {
       <p class="quiz-feedback-title">${isCorrect ? "✓ Correct!" : "✕ Not quite."}</p>
       <p class="quiz-feedback-text">${q.explanation}</p>
     </div>
-    <button class="btn btn-primary" id="quiz-next-btn" style="margin-top:16px;">
-      ${currentQ + 1 < quizQuestions.length ? "Next question →" : "See results →"}
-    </button>
   `;
   feedback.classList.add("is-in");
-  document.getElementById("quiz-next-btn").addEventListener("click", nextQuestion);
+
+  setTimeout(nextQuestion, 1500);
 }
 
 function nextQuestion() {
@@ -228,7 +217,6 @@ function showResult() {
   `;
   document.getElementById("quiz-retry-btn").addEventListener("click", startQuiz);
 
-  // Animate the score ring in
   requestAnimationFrame(() => {
     document.querySelector(".quiz-score-circle").classList.add("is-filled");
   });

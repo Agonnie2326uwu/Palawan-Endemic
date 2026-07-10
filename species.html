@@ -5,9 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Species Directory — Palawan Wild</title>
 <meta name="description" content="All 14 endemic species profiled — mammals, birds, and reptiles of Palawan, with conservation status and safety guidance.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Species Directory — Palawan Wild">
+<meta property="og:description" content="All 14 endemic species profiled — mammals, birds, and reptiles of Palawan, with conservation status and safety guidance.">
+<meta property="og:image" content="assets/animals/palawan-pangolin.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Species Directory — Palawan Wild">
+<meta name="twitter:description" content="All 14 endemic species profiled — mammals, birds, and reptiles of Palawan, with conservation status and safety guidance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,6 +32,7 @@
       <li><a href="map.html">Map</a></li>
       <li><a href="quiz.html">Quiz</a></li>
       <li><a href="rescue.html">Rescue &amp; Hotline</a></li>
+      <li><button class="theme-toggle" aria-label="Switch theme">🌙</button></li>
     </ul>
   </div>
 </header>
@@ -86,10 +94,6 @@
   <div class="modal" id="species-modal" role="dialog" aria-modal="true"></div>
 </div>
 
-<script src="data/species.js"></script>
-<script src="js/species-render.js"></script>
-<script src="js/modal.js"></script>
-<script src="js/filters.js"></script>
-<script src="js/nav.js"></script>
+<script type="module" src="/js/pages/species.js"></script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+{
+  "name": "palawan-wild",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A field guide to the endemic animals of Palawan, Philippines — conservation status, encounter safety, and species identification.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,css,html,json}\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  }
+}

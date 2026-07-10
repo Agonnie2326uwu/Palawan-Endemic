@@ -4,7 +4,7 @@
    reads from this file. To add/edit an animal, only touch this file.
    ========================================================================== */
 
-const SPECIES = [
+export const SPECIES = [
   {
     id: "palawan-hornbill",
 
@@ -367,13 +367,13 @@ const SPECIES = [
   }
 ];
 
-const CATEGORY_LABELS = {
+export const CATEGORY_LABELS = {
   mammals: "Mammals",
   birds: "Birds",
   reptiles: "Reptiles"
 };
 
-const STATUS_META = {
+export const STATUS_META = {
   "critically-endangered": { label: "Critically Endangered", color: "#b03a2e", order: 1 },
   "endangered":             { label: "Endangered",            color: "#c0533a", order: 2 },
   "vulnerable":             { label: "Vulnerable",             color: "#d68c2f", order: 3 },
@@ -381,7 +381,7 @@ const STATUS_META = {
   "least-concern":          { label: "Least Concern",          color: "#5a8a4a", order: 5 }
 };
 
-const DANGER_META = {
+export const DANGER_META = {
   none:     { label: "No real danger",        color: "#5a8a4a" },
   low:      { label: "Low — caution advised",  color: "#b8a13a" },
   moderate: { label: "Moderate — be careful",  color: "#d68c2f" },

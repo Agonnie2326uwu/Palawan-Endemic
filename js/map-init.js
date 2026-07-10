@@ -1,12 +1,7 @@
-/* ==========================================================================
-   PALAWAN WILD — MAP INIT
-   Leaflet map with one pin per species location, color-coded by
-   conservation status. Reads from data/species.js.
-   ========================================================================== */
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import { SPECIES, STATUS_META } from "../data/species.js";
 
-/* Approximate coordinates for named locations across Palawan.
-   Hand-placed reference points — not survey-grade, intended for a
-   general field-guide map rather than precise GPS tracking. */
 const LOCATION_COORDS = {
   "Puerto Princesa": [9.7392, 118.7353],
   "Puerto Princesa Subterranean River N.P.": [10.1995, 118.9211],
@@ -43,7 +38,7 @@ const LOCATION_COORDS = {
 
 document.addEventListener("DOMContentLoaded", () => {
   const mapEl = document.getElementById("map");
-  if (!mapEl || typeof L === "undefined") return;
+  if (!mapEl) return;
 
   const map = L.map("map", { scrollWheelZoom: false }).setView([9.9, 118.8], 8);
 
@@ -53,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  // Re-enable scroll zoom only once the user clicks into the map (avoids page-scroll hijack)
   map.on("focus", () => map.scrollWheelZoom.enable());
   map.on("blur", () => map.scrollWheelZoom.disable());
 
@@ -78,14 +72,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const coords = LOCATION_COORDS[locName];
       if (!coords) return;
 
-      // Small jitter so overlapping species at the same named place don't fully stack
       const jitter = () => (Math.random() - 0.5) * 0.04;
       const lat = coords[0] + jitter();
       const lng = coords[1] + jitter();
 
       const marker = L.marker([lat, lng], { icon: makeDivIcon(colorFor(animal)) })
         .bindPopup(`
-          <strong style="font-family: Fraunces, serif;">${animal.name}</strong><br>
+          <strong>${animal.name}</strong><br>
           <em style="font-size:0.85em;">${animal.scientificName}</em><br>
           <span style="font-size:0.82em;">${locName}</span><br>
           <span style="font-size:0.78em; font-weight:700; color:${colorFor(animal)};">${animal.statusLabel}</span>

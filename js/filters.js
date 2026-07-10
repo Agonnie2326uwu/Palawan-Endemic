@@ -1,8 +1,5 @@
-/* ==========================================================================
-   PALAWAN WILD — FILTERS
-   Category chip filtering + live text search for species.html.
-   Re-renders the grid via renderSpeciesCards() from species-render.js.
-   ========================================================================== */
+import { SPECIES } from "../data/species.js";
+import { renderSpeciesCards } from "./species-render.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("species-grid");
@@ -48,6 +45,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Initial render
   applyFilters();
 });

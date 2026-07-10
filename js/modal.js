@@ -1,8 +1,4 @@
-/* ==========================================================================
-   PALAWAN WILD — MODAL
-   Opens a detail dialog for a species: full bio, encounter guidance, and
-   first aid if relevant. Used wherever species-render.js builds cards.
-   ========================================================================== */
+import { DANGER_META, CATEGORY_LABELS } from "../data/species.js";
 
 let lastFocusedElement = null;
 
@@ -71,7 +67,7 @@ function buildModalHTML(animal) {
   `;
 }
 
-function openSpeciesModal(animal) {
+export function openSpeciesModal(animal) {
   const overlay = document.getElementById("species-modal-overlay");
   const modal = document.getElementById("species-modal");
   if (!overlay || !modal) return;
@@ -90,7 +86,7 @@ function openSpeciesModal(animal) {
   });
 }
 
-function closeSpeciesModal() {
+export function closeSpeciesModal() {
   const overlay = document.getElementById("species-modal-overlay");
   if (!overlay) return;
   overlay.classList.remove("is-open");
